@@ -1,3 +1,52 @@
+
+.berniParado{
+    background-image: url(./img/x2/berniParado.png);
+
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.loboParado{
+    background-image: url(./img/x2/LoboParado.png);
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.matiParado{
+    background-image: url(./img/x2/matiParado.png);
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.miriamParado{
+    background-image: url(./img/x2/miriamParado.png);
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#personajes {
+	border: medium solid;
+	width: 500px;
+}
+
+#personajes td{
+	width: 128px;
+	height: 134px;
+	border: thin solid;
+}
+
+#personajes td.seleccionado{
+	border: medium solid #939;
+}
+
 .character{
     filter: brightness(1.1);
     mix-blend-mode: multiply;
