@@ -1,80 +1,73 @@
-.character{
+/*
+Berni
+*/
+.seleccionado{
     filter: brightness(1.1);
     mix-blend-mode: multiply;
-    position: relative;
-
-    height: 69px;
-    width: calc(449px/7);
-
-    background: url(medit.png);
-    animation: animarJony 1s steps(7) infinite;
+    margin: 0 auto;
 }
 
-.agacharse{
-    filter: brightness(1.1);
-    mix-blend-mode: multiply;
-    position: relative;
-
-    height: 52px;
-    width: calc(250px/4);
-
-    background: url(agacharse.png);
-    animation: agacharse 0.7s steps(4) normal;
+.seleccionado.berni{
+    height: 248px;
+    width: calc(1553px/6);
+    background: url(img/x4/berniCamina.png);
+    animation: berniCamina 2s steps(6) infinite;
 }
-.levantarse{
-    filter: brightness(1.1);
-    mix-blend-mode: multiply;
-    position: relative;
-
-    height: 52px;
-    width: calc(250px/4);
-
-    background: url(agacharse.png);
-    animation: levantarse 1s steps(4) normal;
+.seleccionado.berniAtaca{
+    height: 308px;
+    width: calc(4740px/6);
+    background: url(img/x4/berniAtaca.png);
+    animation: berniAtaca 0.8s steps(6) normal;
 }
 
-.flexiones{
-    filter: brightness(1.1);
-    mix-blend-mode: multiply;
-    position: relative;
-
-    height: 46px;
-    width: calc(117px/2);
-
-    background: url(flexiones.png);
-    animation: hacerFlexiones 1s steps(2) infinite;
-}
-
-@keyframes animarJony{
+@keyframes berniAtaca{
     from {
         background-position:0;
     }
     to{
-        background-position: 449px;
+        background-position: -4540px;
+    }
+}
+@keyframes berniCamina{
+    from {
+        background-position:0;
+    }
+    to{
+        background-position: -1553px;
+    }
+}
+/*
+Matias
+*/
+.seleccionado.mati{
+    height: 280px;
+    width: calc(2047px/8);
+    background: url(img/x4/matiCamina.png);
+    animation: matiCamina 1s steps(8) infinite;
+}
+
+.seleccionado.matiAtaca{
+    height: 280px;
+    width: calc(1749px/7);
+    background: url(img/x4/matiAtaca.png);
+    animation: matiAtaca 0.8s steps(7) normal;
+}
+
+
+@keyframes matiCamina{
+    from {
+        background-position:0;
+    }
+    to{
+        background-position: -2047px;
     }
 }
 
-@keyframes agacharse {
+@keyframes matiAtaca{
     from {
         background-position:0;
     }
     to{
-        background-position: -250px;
-    }
-}
-@keyframes levantarse {
-    from {
-        background-position:0;
-    }
-    to{
-        background-position: 250px;
-    }
-}
-@keyframes hacerFlexiones {
-    from {
-        background-position:0;
-    }
-    to{
-        background-position: 117px;
+        background-position: -1749px;
     }
 }
