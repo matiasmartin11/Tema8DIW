@@ -1,0 +1,80 @@
+.character{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    position: relative;
+
+    height: 69px;
+    width: calc(449px/7);
+
+    background: url(medit.png);
+    animation: animarJony 1s steps(7) infinite;
+}
+
+.agacharse{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    position: relative;
+
+    height: 52px;
+    width: calc(250px/4);
+
+    background: url(agacharse.png);
+    animation: agacharse 0.7s steps(4) normal;
+}
+.levantarse{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    position: relative;
+
+    height: 52px;
+    width: calc(250px/4);
+
+    background: url(agacharse.png);
+    animation: levantarse 1s steps(4) normal;
+}
+
+.flexiones{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    position: relative;
+
+    height: 46px;
+    width: calc(117px/2);
+
+    background: url(flexiones.png);
+    animation: hacerFlexiones 1s steps(2) infinite;
+}
+
+@keyframes animarJony{
+    from {
+        background-position:0;
+    }
+    to{
+        background-position: 449px;
+    }
+}
+
+@keyframes agacharse {
+    from {
+        background-position:0;
+    }
+    to{
+        background-position: -250px;
+    }
+}
+@keyframes levantarse {
+    from {
+        background-position:0;
+    }
+    to{
+        background-position: 250px;
+    }
+}
+@keyframes hacerFlexiones {
+    from {
+        background-position:0;
+    }
+    to{
+        background-position: 117px;
+    }
+}
