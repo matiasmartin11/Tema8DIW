@@ -23,36 +23,33 @@ function manejarEvento(evento){
 }
 
 function iniciar(){
-    selectAvatar();
-
-    var tablaAvatar=getNode("personajes");
+    //console.log("ey");
+    var tablaAvatar=document.getElementById("personajes");
 
     var celdasAvatar=tablaAvatar.getElementsByTagName("td");
     for (var i=0;i<celdasAvatar.length;i++){
-		crearEvento(celdasAvatar[i],"click",detectarPersonajes);
+		celdasAvatar[i].addEventListener("click",detectarPersonajes);
 	}
 }
-function selectAvatar(){
-    getNode("zonaPersonaje").appendChild(nuevaTabla);
-}
+
 function detectarPersonajes(){
-    for (var i=0; i<this.parentElement.children.length;i++){	
-		if (navigator.appName.indexOf("Explorer") != -1){
-			this.parentNode.childNodes[i].className = this.parentNode.childNodes[i].className.replace(/\bseleccionado\b/,'');
-		}else{
+    //console.log("hola");
+    for(let i=0; i<this.parentNode.children.length; i++){
+		if(this.parentElement.children[i].classList.contains("seleccionado")){
 			this.parentElement.children[i].classList.remove("seleccionado");
+			break;
 		}
 	}
 
-	if (navigator.appName.indexOf("Explorer") != -1){
-		colorActivo=this.className;
-		this.className+=" seleccionado";
-	}else{
-		colorActivo=this.classList[0];
-		this.classList.add("seleccionado");
-	}
+	// Tendremos que usar classList para actualizar el avatar activo
+	avatarActivo = this.classList[0];
+	console.log(avatarActivo);
+
+	// Adicionalmente añadimos al elemento donde hemos hecho click la clase "seleccionado"
+	this.classList.add("seleccionado");
 }
-crearEvento(window,"load", iniciar);
+var avatarActivo="";
+window.onload = iniciar();
 
 
 
