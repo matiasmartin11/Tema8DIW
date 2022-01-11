@@ -1,0 +1,266 @@
+
+
+.caja {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10%;
+
+    background-color: peru;
+    border-color: moccasin;
+
+    animation-name: vueltaRapida;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    animation-fill-mode: none;
+}
+
+@keyframes vueltaRapida {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.bola {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: olive;
+    border-color: orangered;
+    animation: salto 1s infinite ease-in alternate;
+}
+
+@keyframes salto {
+    0%{margin-bottom: 0%;}
+    100%{margin-top: 0%;}
+}
+
+.box {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    background-color: black;
+    position: relative;
+    border: 3px solid blue;
+    animation: vuelta 10s linear forwards infinite alternate;
+}
+
+@keyframes vuelta {
+    to {
+        transform: translate(200px) rotate(360deg);
+    }
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-top: 0;
+    border-bottom: 100px solid red;
+  }
+
+.triangle:active {
+    animation-name: salto;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes salto {
+    0%   {transform: translate(0,0);}
+    10%  {transform: translate(0%,-10%);}
+    20%  {transform: translate(0%,-20%);}
+    30%  {transform: translate(0%,-30%);}
+    40%  {transform: translate(0%,-40%);}
+    50%  {transform: translate(0%,-50%);}
+    60%  {transform: translate(0%,-40%);}
+    70%  {transform: translate(0%,-30%);}
+    80%  {transform: translate(0%,-20%);}
+    90%  {transform: translate(0%,-10%);}
+    100% {transform: translate(0%,0%);}
+    to{
+        transform: translate(0%,0%);
+    }
+}
+
+.cuadradicoPequenico {
+    height: 50px;
+    width: 50px;
+    border-radius: 5%;
+    background-color: orange;
+    position: relative;
+    border: 3px solid blue;
+    animation-name: vueltecica;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-fill-mode: none;
+}
+
+@keyframes vueltecica {
+    to {
+        transform: translate(50px);
+        transform: rotate(90deg);
+    }
+}
+
+.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #00ff0d;
+}
+.circle::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(83, 252, 83, 0.5);
+    box-shadow: 0 0 20px #03bc03;
+    border-radius: 40%;
+    animation: rotate 20s linear forwards infinite;
+}
+
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circleRed {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ff0000;
+}
+.circleRed::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(252, 83, 83, 0.5);
+    box-shadow: 0 0 20px #bc0303;
+    border-radius: 40%;
+    animation: rotate 20s linear forwards infinite;
+}
+
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.billy{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+    position: relative;
+    height: 120px;
+    width: calc(920px/8);
+    background: url(images/char2.png);
+}
+
+.billy:hover{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+    animation: animateBilly 1s steps(8) infinite;
+}
+
+@keyframes animateBilly {
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 920px;
+    }
+}
+
+.psj{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+    position: relative;
+    height: 180px;
+    width: calc(1600px/7);
+    background: url(images/psj2.png);
+}
+
+.psj:hover{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+    animation: animatePsj 1s steps(7) infinite;
+}
+
+@keyframes animatePsj {
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: 1600px;
+    }
+}
+
+.psjWalk{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+    position: relative;
+    height: 180px;
+    width: calc(1600px/7);
+    background: url(images/psj2Walk.png);
+    animation: animatePsjWalk 1s steps(7) infinite;
+}
+
+
+@keyframes animatePsjWalk {
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: -1600px;
+    }
+}
+
+.psjAttack{
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+    position: relative;
+    height: 180px;
+    width: calc(1600px/7);
+    background: url(images/psj2Attacl.png);
+    animation: animatePsjAttack 1s steps(7) infinite;
+}
+
+
+@keyframes animatePsjAttack {
+    from{
+        background-position: 0;
+    }
+    to{
+        background-position: -1600px;
+    }
+}
