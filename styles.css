@@ -1,7 +1,24 @@
-/*
-Berni
-*/
 
+.titulo{
+    text-align: center;
+}
+#personajes {
+	border: medium solid;
+	width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#personajes td{
+	width: 128px;
+	height: 134px;
+	border: thin solid;
+}
+
+#personajes td.seleccionado{
+	border: medium solid #939;
+}
 .berniParado{
     background-image: url(./img/x2/berniParado.png);
     background-color: #cccccc;
@@ -34,36 +51,25 @@ Berni
     background-size: cover;
     position: relative;
 }
-#personajes {
-	border: medium solid;
-	width: 500px;
-}
-
-#personajes td{
-	width: 128px;
-	height: 134px;
-	border: thin solid;
-}
-
-#personajes td.seleccionado{
-	border: medium solid #939;
-}
 
 
+/*
+Berni
+*/
 
-.character{
+.mostrar{
     filter: brightness(1.1);
     mix-blend-mode: multiply;
     margin: 0 auto;
 }
 
-.seleccionado.berni{
+.mostrar.berni{
     height: 248px;
     width: calc(1553px/6);
     background: url(img/x4/berniCamina.png);
     animation: berniCamina 2s steps(6) infinite;
 }
-.seleccionado.berniAtaca{
+.mostrar.berniAtaca{
     height: 308px;
     width: calc(4740px/6);
     background: url(img/x4/berniAtaca.png);
@@ -89,14 +95,14 @@ Berni
 /*
 Matias
 */
-.seleccionado.mati{
+.mostrar.mati{
     height: 280px;
     width: calc(2047px/8);
     background: url(img/x4/matiCamina.png);
     animation: matiCamina 1s steps(8) infinite;
 }
 
-.seleccionado.matiAtaca{
+.mostrar.matiAtaca{
     height: 280px;
     width: calc(1749px/7);
     background: url(img/x4/matiAtaca.png);

@@ -1,4 +1,4 @@
-let nodo = document.querySelector(".seleccionado");
+let nodo = document.querySelector(".mostrar");
 let psjSeleccionado;
 document.addEventListener("keydown", manejarEvento);
 
