@@ -39,6 +39,7 @@ function iniciar(){
     var celdasAvatar=tablaAvatar.getElementsByTagName("td");
     for (var i=0;i<celdasAvatar.length;i++){
 		celdasAvatar[i].addEventListener("click",detectarPersonajes);
+        celdasAvatar[i].addEventListener("click",cambiarPersonaje);
 	}
 }
 
@@ -58,7 +59,46 @@ function detectarPersonajes(){
 	// Adicionalmente añadimos al elemento donde hemos hecho click la clase "seleccionado"
 	this.classList.add("seleccionado");
 }
+
+
+function cambiarPersonaje(evt){
+
+    var personaje= document.querySelector(".mostrar");
+
+    if(personaje.classList.contains("mati")){
+        personaje.classList.remove("mati");
+    }
+
+    personaje.classList.add(this.classList[0]);
+
+}
+
+
+/*
+function activarPsj(evt){
+    if(selectorActivo){
+        avatarActivo=false;
+    }else{
+        selectorActivo=true;
+    }
+}
+
+function selectorPsj(evt){
+    nuevo = avatarActivo;
+    if(selectorActivo){
+        if (navigator.appName.indexOf("Explorer") != -1){
+			this.className=avatarActivo;
+		}else{
+			for (var i=0;i<this.classList.length;i++){
+				this.classList.remove(this.classList[i]);
+			}
+			this.classList.add(avatarActivo);
+		}
+    }
+}
+*/
 var avatarActivo="";
+var selectorActivo=false;
 window.onload = iniciar();
 
 
