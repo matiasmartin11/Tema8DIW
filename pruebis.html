@@ -8,21 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="titulo">
-        <h1>Seleccion de personaje</h1>
-    </div>
-    <div>
-        <table id="personajes">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="text-center">Personajes</h1>
+        </div>
+        <div class="row justify-content-center">
+            <table id="personajes">
+                <caption>
+                    Haga CLICK en un personaje
+                </caption>
             <tr>
                 <td class="berniParado seleccionado"></td>
                 <td class="loboParado"></td>
                 <td class="matiParado"></td>
                 <td class="miriamParado"></td>
             </tr>
-        </table>
-    </div>
-    <div class="mostrar mati">
-        
+        </table> 
+        </div>
+        <div class="row justify-content-center">
+            <p id="pClick"></p>
+        </div>
+        <div id="zonaPersonaje" class="row justify-content-center">
+        </div>
     </div>
 </body>
 </html>
