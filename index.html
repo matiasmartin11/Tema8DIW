@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="titulo">
         <h1>Seleccion de personaje</h1>
@@ -14,21 +16,27 @@
     <div>
         <table id="personajes">
             <tr>
-                <td class="berniParado seleccionado" id= "berni"></td>
+                <td class="berniParado seleccionado" id="berni"></td>
                 <td class="loboParado" id="lobo"></td>
                 <td class="matiParado" id="mati"></td>
                 <td class="miriamParado" id="miriam"></td>
             </tr>
         </table>
-        
+
     </div>
-    <div id="container">
+    <div id="container" class="zona">
         <div class="mostrar berni"></div>
+        <div class="zonaCirculos">
+            <div class="circleVida"></div>
+            <br>
+            <div class="circleAtaque"></div>
+        </div>
     </div>
-    
-    <div class="mostrar circle"></div>
+   
+
 </body>
+
 </html>
 
-    
+
 <script src="logica.js"></script>

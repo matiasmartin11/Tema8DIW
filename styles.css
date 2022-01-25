@@ -1,6 +1,9 @@
 #container{
     height: 400px;
 }
+.body{
+    background-image: url(./img/fondo/fodo.png);
+}
 .titulo{
     text-align: center;
 }
@@ -192,23 +195,23 @@ Lobo
     }
 }
 
-.circle{
+.circleVida{
     height: 100px;
     width: 100px;
     border-radius: 50%;
-    background-color: rgb(76, 179, 161);
+    background-color: rgb(76, 179, 102);
     position: relative;
     overflow: hidden;
-    border: 5px solid paleturquoise;
+    border: 5px solid rgb(15, 136, 55);
 }
-.circle::after{
+.circleVida::after{
     content: "";
     position: absolute;
     top: 70%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: rgb(17, 110, 103);
+    background: rgb(30, 117, 27);
     box-shadow: (0,0,4);
     border-radius: 40%;
     animation: rotate 10s linear forwards infinite;
@@ -217,4 +220,39 @@ Lobo
     to{
         transform: rotate(360deg);
     }
+}
+.circleAtaque{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(179, 76, 76);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid rgb(54, 0, 0);
+}
+.circleAtaque::after{
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgb(110, 17, 17);
+    box-shadow: (0,0,4);
+    border-radius: 40%;
+    animation: rotate 10s linear forwards infinite;
+}
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.zona{
+    display: flex;
+    justify-content: center;
+}
+.zonaCirculos{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
