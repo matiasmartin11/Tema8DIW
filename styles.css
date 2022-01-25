@@ -189,3 +189,30 @@ Lobo
         background-position: -2303px;
     }
 }
+
+.circle{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(76, 179, 161);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid paleturquoise;
+}
+.circle::after{
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgb(17, 110, 103);
+    box-shadow: (0,0,4);
+    border-radius: 40%;
+    animation: rotate 10s linear forwards infinite;
+}
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
