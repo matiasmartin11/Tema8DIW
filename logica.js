@@ -33,7 +33,7 @@ function manejarEvento(evento){
 }
 
 function iniciar(){
-    //console.log("ey");
+    
     var tablaAvatar=document.getElementById("personajes");
 
     var celdasAvatar=tablaAvatar.getElementsByTagName("td");
@@ -44,7 +44,7 @@ function iniciar(){
 }
 
 function detectarPersonajes(){
-    //console.log("hola");
+   
     for(let i=0; i<this.parentNode.children.length; i++){
 		if(this.parentElement.children[i].classList.contains("seleccionado")){
 			this.parentElement.children[i].classList.remove("seleccionado");
@@ -54,7 +54,7 @@ function detectarPersonajes(){
 
 	// Tendremos que usar classList para actualizar el avatar activo
 	avatarActivo = this.classList[0];
-	console.log(avatarActivo);
+	
 
 	// Adicionalmente añadimos al elemento donde hemos hecho click la clase "seleccionado"
 	this.classList.add("seleccionado");
@@ -63,40 +63,26 @@ function detectarPersonajes(){
 
 function cambiarPersonaje(evt){
 
-    var personaje= document.querySelector(".mostrar");
+    var personaje = document.querySelector(".mostrar");
 
+    if(personaje.classList.contains("berni")){
+        personaje.classList.remove("berni");
+    }
+    if(personaje.classList.contains("lobo")){
+        personaje.classList.remove("lobo");
+    }
     if(personaje.classList.contains("mati")){
         personaje.classList.remove("mati");
     }
-
-    personaje.classList.add(this.classList[0]);
-
-}
-
-
-/*
-function activarPsj(evt){
-    if(selectorActivo){
-        avatarActivo=false;
-    }else{
-        selectorActivo=true;
+    if(personaje.classList.contains("miriam")){
+        personaje.classList.remove("miriam");
     }
+
+    
+    personaje.classList.add(this.id);
+
 }
 
-function selectorPsj(evt){
-    nuevo = avatarActivo;
-    if(selectorActivo){
-        if (navigator.appName.indexOf("Explorer") != -1){
-			this.className=avatarActivo;
-		}else{
-			for (var i=0;i<this.classList.length;i++){
-				this.classList.remove(this.classList[i]);
-			}
-			this.classList.add(avatarActivo);
-		}
-    }
-}
-*/
 var avatarActivo="";
 var selectorActivo=false;
 window.onload = iniciar();

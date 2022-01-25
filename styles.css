@@ -52,24 +52,22 @@
     position: relative;
 }
 
-
-/*
-Berni
-*/
-
 .mostrar{
     filter: brightness(1.1);
     mix-blend-mode: multiply;
     margin: 0 auto;
 }
 
-.mostrar.berni{
+/*
+Berni
+*/
+.berni{
     height: 248px;
     width: calc(1553px/6);
     background: url(img/x4/berniCamina.png);
     animation: berniCamina 2s steps(6) infinite;
 }
-.mostrar.berniAtaca{
+.berniAtaca{
     height: 308px;
     width: calc(4740px/6);
     background: url(img/x4/berniAtaca.png);
@@ -95,14 +93,14 @@ Berni
 /*
 Matias
 */
-.mostrar.mati{
+.mati{
     height: 243px;
     width: calc(2047px/8);
     background: url(img/x4/matiCamina.png);
     animation: matiCamina 1s steps(8) infinite;
 }
 
-.mostrar.matiAtaca{
+.matiAtaca{
     height: 263px;
     width: calc(1744px/7);
     background: url(img/x4/matiAtaca.png);
@@ -130,20 +128,13 @@ Matias
 /*
 Miriam
 */
-
-.mostrar{
-    filter: brightness(1.1);
-    mix-blend-mode: multiply;
-    margin: 0 auto;
-}
-
-.mostrar.miriam{
+.miriam{
     height: 248px;
     width: calc(2308px/9);
     background: url(img/x4/miriamCamina.png);
     animation: miriamCamina 2s steps(9) infinite;
 }
-.mostrar.miriamAtaca{
+.miriamAtaca{
     height: 260px;
     width: calc(3071px/12);
     background: url(img/x4/miriamAtaca.png);
@@ -169,19 +160,13 @@ Miriam
 /*
 Lobo
 */
-.mostrar{
-    filter: brightness(1.1);
-    mix-blend-mode: multiply;
-    margin: 0 auto;
-}
-
-.mostrar.lobo{
+.lobo{
     height: 248px;
     width: calc(2303px/9);
     background: url(img/x4/loboCamina.png);
     animation: loboCamina 2s steps(9) infinite;
 }
-.mostrar.loboAtaca{
+.loboAtaca{
     height: 377px;
     width: calc(5378px/7);
     background: url(img/x4/loboAtaca.png);
