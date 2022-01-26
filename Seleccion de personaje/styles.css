@@ -23,9 +23,8 @@
     border-radius: 5px;
 	width: 500px;
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #personajes td{
@@ -63,18 +62,20 @@
     background-image: url(./img/fondo/fondo.png);
     background-position: center;
     background-repeat: no-repeat;
-    height: 350px;
-    width: 800px;
+    border: 5px solid black;
+    height: 380px;
+    width: 760px;
     margin: 0 auto;
+    border-radius: 8px;
 }
 /*
  ZONA DE BATALLA: Personaje + Circulos
 */
 .zona{
-    padding-top: 40px;
+    padding-top: 150px;
     margin: 0 auto;
     width: 800px;
-    height: 400px;
+    height: auto;
     display: flex;
 }
 /*
@@ -92,6 +93,10 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    position: absolute;
+    height: 200px;
+    margin-left: 15px;
+    margin-bottom: 15px;
 }
 .circleVida{
     height: 100px;
