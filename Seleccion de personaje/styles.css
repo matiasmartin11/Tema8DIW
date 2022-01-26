@@ -1,69 +1,145 @@
-#container{
-    height: 400px;
-    display: flex;
-}
-.body{
-    background-image: url(./img/fondo/fodo.png);
-}
+/*
+ HEADER 
+*/
 .titulo{
     text-align: center;
 }
+/*
+ CUADRO DE SELECCION 
+*/
 #personajes {
-	border: medium solid;
+    border-collapse: separate;
+    border: 4px solid black;
+    border-radius: 5px;
 	width: 500px;
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
+    
 }
 
 #personajes td{
 	width: 128px;
 	height: 134px;
-	border: thin solid;
+	border: 2px solid rgb(2, 2, 77);
+    border-radius: 5px;
+    background-color: #7ea2d8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
 #personajes td.seleccionado{
-	border: medium solid #939;
+	border: 4px solid rgb(28, 38, 134);
 }
 .berniParado{
     background-image: url(./img/x2/berniParado.png);
-    background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    
 }
 .loboParado{
     background-image: url(./img/x2/LoboParado.png);
-    background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 }
 .matiParado{
     background-image: url(./img/x2/matiParado.png);
-    background-color: #cccccc;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 }
 .miriamParado{
     background-image: url(./img/x2/miriamParado.png);
-    background-color: #cccccc;
+}
+/*
+ ZONA DE BATALLA:Fondo
+*/
+.fondo{
+    background-image: url(./img/fondo/fondo.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+    height: 350px;
 }
-
+/*
+ ZONA DE BATALLA: Personaje + Circulos
+*/
+.zona{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    height: 400px;
+    display: flex;
+}
+/*
+ ZONA DE BATALLA: Personaje
+*/
 .mostrar{
     filter: brightness(1.1);
-    mix-blend-mode: multiply;
     margin: 0 auto;
 }
-
+/*
+ ZONA DE BATALLA: Circulos
+*/
+.zonaCirculos{
+    margin-right: 20px;
+    width: 100px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.circleVida{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(76, 179, 102);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid rgb(15, 136, 55);
+}
+.circleVida::after{
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgb(30, 117, 27);
+    box-shadow: (0,0,4);
+    border-radius: 40%;
+    animation: rotate 10s linear forwards infinite;
+}
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
+.circleAtaque{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(179, 76, 76);
+    position: relative;
+    overflow: hidden;
+    border: 5px solid rgb(54, 0, 0);
+}
+.circleAtaque::after{
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgb(110, 17, 17);
+    box-shadow: (0,0,4);
+    border-radius: 40%;
+    animation: rotate 10s linear forwards infinite;
+}
+@keyframes rotate {
+    to{
+        transform: rotate(360deg);
+    }
+}
+/*
+ANIMACIONES PERSONAJES
+*/
 /*
 Berni
 */
@@ -196,68 +272,3 @@ Lobo
     }
 }
 
-.circleVida{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: rgb(76, 179, 102);
-    position: relative;
-    overflow: hidden;
-    border: 5px solid rgb(15, 136, 55);
-}
-.circleVida::after{
-    content: "";
-    position: absolute;
-    top: 70%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgb(30, 117, 27);
-    box-shadow: (0,0,4);
-    border-radius: 40%;
-    animation: rotate 10s linear forwards infinite;
-}
-@keyframes rotate {
-    to{
-        transform: rotate(360deg);
-    }
-}
-.circleAtaque{
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: rgb(179, 76, 76);
-    position: relative;
-    overflow: hidden;
-    border: 5px solid rgb(54, 0, 0);
-}
-.circleAtaque::after{
-    content: "";
-    position: absolute;
-    top: 70%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgb(110, 17, 17);
-    box-shadow: (0,0,4);
-    border-radius: 40%;
-    animation: rotate 10s linear forwards infinite;
-}
-@keyframes rotate {
-    to{
-        transform: rotate(360deg);
-    }
-}
-.zona{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin: 0 auto;
-    width: 50%;
-}
-.zonaCirculos{
-    width: 100px;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-}

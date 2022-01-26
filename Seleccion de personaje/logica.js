@@ -2,15 +2,6 @@ let nodo = document.querySelector(".mostrar");
 let psjSeleccionado;
 document.addEventListener("keydown", manejarEvento);
 
-/*document.addEventListener("keyup", () => {
-    nodo.removeAttribute("class");
-    nodo.classList.add("character");
-    console.log("keyup");
-});
-*/
-function seleccionarPsj(){
-
-}
 
 function manejarEvento(evento){
     //nombre del personaje + atacar
@@ -33,14 +24,16 @@ function manejarEvento(evento){
 }
 
 function iniciar(){
-    
+    const musicaFondo = new Audio("./sound/batalla.wav");
+    musicaFondo.play();
     var tablaAvatar=document.getElementById("personajes");
-
     var celdasAvatar=tablaAvatar.getElementsByTagName("td");
     for (var i=0;i<celdasAvatar.length;i++){
 		celdasAvatar[i].addEventListener("click",detectarPersonajes);
-        celdasAvatar[i].addEventListener("click",cambiarPersonaje);
+        celdasAvatar[i].addEventListener("click", reproducirSonido);
 	}
+    
+
 }
 
 function detectarPersonajes(){
@@ -58,11 +51,6 @@ function detectarPersonajes(){
 
 	// Adicionalmente añadimos al elemento donde hemos hecho click la clase "seleccionado"
 	this.classList.add("seleccionado");
-}
-
-
-function cambiarPersonaje(evt){
-
     var personaje = document.querySelector(".mostrar");
 
     if(personaje.classList.contains("berni")){
@@ -80,14 +68,15 @@ function cambiarPersonaje(evt){
 
     
     personaje.classList.add(this.id);
-
 }
 
+function reproducirSonido(evt){
+    const music = new Audio("./sound/select.wav");
+    music.play();
+}
 var avatarActivo="";
 var selectorActivo=false;
 window.onload = iniciar();
-
-
 
 
 
