@@ -1,40 +1,68 @@
+//variables seleccion de personaje
 let nodo = document.querySelector(".mostrar");
 let psjSeleccionado;
 document.addEventListener("keydown", manejarEvento);
 
 
-function manejarEvento(evento){
-    //nombre del personaje + atacar
-    ordenAtaque = nodo.classList[1] + "Ataca";
-    
-    console.log(nodo);
-    console.log(nodo.classList[1]+ "Ataca");
-    console.log(evento);
-    console.log("entra");
+//variables musica
+let musica = document.querySelector(".musica");
+musica.addEventListener("click", reproducirMusica);
+const musicaFondo = new Audio("./sound/batalla.wav");
+let musicaOn = false;
 
-    if(evento.keyCode === 32){
-        nodo.classList.add(ordenAtaque);
-        
-        console.log(nodo.classList);
-        setTimeout(function(){
-            nodo.classList.remove(ordenAtaque);
-        },1000);
-        
-    }
-}
+//variable mostrar personajes
+var avatarActivo="";
+var selectorActivo=false;
 
 function iniciar(){
-    const musicaFondo = new Audio("./sound/batalla.wav");
-    musicaFondo.play();
+    //crear tabla de seleccion de personaje
     var tablaAvatar=document.getElementById("personajes");
     var celdasAvatar=tablaAvatar.getElementsByTagName("td");
+    
     for (var i=0;i<celdasAvatar.length;i++){
 		celdasAvatar[i].addEventListener("click",detectarPersonajes);
         celdasAvatar[i].addEventListener("click", reproducirSonido);
 	}
-    
-
 }
+
+//manejar KEYDOWN SPACE
+function manejarEvento(evento){
+    //nombre del personaje + atacar
+    let nombre = nodo.classList[1];
+    
+    if(-1 == nombre.indexOf("Ataca")&& evento.keyCode === 32){
+        ordenAtaque = nombre + "Ataca";
+        nodo.classList.remove(nodo.classList[1]);
+        nodo.classList.add(ordenAtaque);
+        
+
+        setTimeout(function(){
+            nodo.classList.remove(nodo.classList[1]);
+            nodo.classList.add(nombre);
+        },1000); 
+    }
+}
+
+function reproducirMusica(evt){
+    if(musicaOn == false){
+        musicaFondo.play();
+        console.log("musica");
+        musica.style.backgroundImage = "url('./img/header/musicon.png')";
+        musicaOn = true;
+    }
+    else{
+        musicaFondo.pause();
+        musica.style.backgroundImage = "url('./img/header/musicof.png')";
+        musicaOn = false;
+    }
+    
+}
+    //funcion asociada a TD 
+function reproducirSonido(evt){
+    const music = new Audio("./sound/select.wav");
+    music.play();
+}
+
 
 function detectarPersonajes(){
    
@@ -53,29 +81,11 @@ function detectarPersonajes(){
 	this.classList.add("seleccionado");
     var personaje = document.querySelector(".mostrar");
 
-    if(personaje.classList.contains("berni")){
-        personaje.classList.remove("berni");
-    }
-    if(personaje.classList.contains("lobo")){
-        personaje.classList.remove("lobo");
-    }
-    if(personaje.classList.contains("mati")){
-        personaje.classList.remove("mati");
-    }
-    if(personaje.classList.contains("miriam")){
-        personaje.classList.remove("miriam");
-    }
-
-    
-    personaje.classList.add(this.id);
+    personaje.classList.remove(personaje.classList[1]);
+    personaje.classList.add(this.id)
 }
 
-function reproducirSonido(evt){
-    const music = new Audio("./sound/select.wav");
-    music.play();
-}
-var avatarActivo="";
-var selectorActivo=false;
+
 window.onload = iniciar();
 
 

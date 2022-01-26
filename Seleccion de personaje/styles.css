@@ -4,6 +4,16 @@
 .titulo{
     text-align: center;
 }
+.musica{
+    background-image: url("./img/header/musicof.png");
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    margin: 10px;
+    top: 0;
+    left: 0;
+}
 /*
  CUADRO DE SELECCION 
 */
@@ -54,17 +64,16 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 350px;
+    width: 800px;
+    margin: 0 auto;
 }
 /*
  ZONA DE BATALLA: Personaje + Circulos
 */
 .zona{
     padding-top: 40px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
     margin: 0 auto;
-    width: 50%;
+    width: 800px;
     height: 400px;
     display: flex;
 }
@@ -74,13 +83,12 @@
 .mostrar{
     filter: brightness(1.1);
     margin: 0 auto;
+    position: relative;
 }
 /*
  ZONA DE BATALLA: Circulos
 */
 .zonaCirculos{
-    margin-right: 20px;
-    width: 100px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -161,7 +169,7 @@ Berni
         background-position:0;
     }
     to{
-        background-position: -4540px;
+        background-position: -4740px;
     }
 }
 @keyframes berniCamina{
@@ -204,7 +212,7 @@ Matias
         background-position:0;
     }
     to{
-        background-position: -1749px;
+        background-position: -1760px;
     }
 }
 /*
