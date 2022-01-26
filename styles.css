@@ -1,5 +1,6 @@
 #container{
     height: 400px;
+    display: flex;
 }
 .body{
     background-image: url(./img/fondo/fodo.png);
@@ -250,8 +251,12 @@ Lobo
 .zona{
     display: flex;
     justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
 }
 .zonaCirculos{
+    width: 100px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
